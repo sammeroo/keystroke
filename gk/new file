@@ -1,0 +1,2 @@
+cc main.c -lm $(pkg-config --cflags=0 --libs gtk+-2.0 gmodule-2.0)
+

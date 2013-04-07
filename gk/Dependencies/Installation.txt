@@ -1,0 +1,27 @@
+// All dependencies have been provided for -- Abhinav Choudhury
+// Make sure you are in current directory before installing
+
+Method I: Simple Download and Install (Internet Connection Required):
+==========================================
+sudo apt-get install gtk+-2.0
+sudo apt-get install glade
+sudo apt-get install libcairo2-dev
+
+Method II: Installing any of the packages provided. Manual. (say, glib-2.30.3): ## Does not seem to be working for some packages
+==========================================================
+1) Open terminal and enter "tar -Jxf glib-2.30.3.tar.xz" (for .tar.gz, use "tar -zxvf" instead)
+2) "cd glib-2.30.3"
+3) "./configure"
+4) "make"
+5) "make install"				// This may require you to be root, so use "sudo make install" instead
+
+Method III: Alternatively. Automatic. (Does not seem to be working for some packages):
+=============================================================
+1) chmod +x install-dependencies.sh
+2) sudo ./install-dependencies.sh
+
+Important Note (Cairo Installation):
+===================================
+You will need to install the Cairo graphics package manually using:
+sudo apt-get install libcairo2-dev
+

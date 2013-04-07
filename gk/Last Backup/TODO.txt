@@ -1,0 +1,12 @@
+Create the Registration window.
+
+Write signals for necessary events.
+
+Develop proper and adequate method for data output.
+
+***	NOTE: Make "settings.conf" read-only to users. Can only be modified by program.
+
+******** Develop and implement the ANN algorithm. Figure out proper implementation (Octave, MATLAB, C?)
+
+DEV END:
+Write necessary library repositories, along with makefile.

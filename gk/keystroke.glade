@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.24"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="Main_Window">
+    <property name="width_request">600</property>
+    <property name="height_request">400</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">GNU Keystroke Recognition module</property>
+    <property name="window_position">center</property>
+    <signal name="destroy" handler="on_Main_Window_destroy" swapped="no"/>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkHBox" id="hbox1">
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="Register_Button">
+                <property name="label" translatable="yes">_Register</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_Register_Button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="Login_Button">
+                <property name="label" translatable="yes">_Login</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_Login_Button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="Results_Button">
+                <property name="label" translatable="yes">Analysis</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="on_Analysis_Button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="Settings_Button">
+                <property name="label" translatable="yes">Settings</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="on_Settings_Button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="Exit_Button">
+                <property name="label" translatable="yes">_Exit</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_Exit_Button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Author_Info_Label">
+            <property name="height_request">5</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">GKR v1.0
+(GNU Keystroke Recognition module)
+Abhinav Choudhury
+Sambit Chatterjee
+Under the supervision of:
+Dr.Chittaranjan Hota</property>
+            <property name="justify">center</property>
+            <attributes>
+              <attribute name="weight" value="ultrabold"/>
+              <attribute name="underline" value="True"/>
+              <attribute name="background" value="#ffffa030a030"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Initial_Info_Label">
+            <property name="height_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">&lt;b&gt;New users, click &lt;span color="#ff0000"&gt;Register&lt;/span&gt; to proceed through 
+the template registration procedure.
+
+If you are already registered, click &lt;span color="#ff0000"&gt;Login&lt;/span&gt;.
+
+Registered users may click on &lt;span color="#ff0000"&gt;Analysis&lt;/span&gt; to view the 
+keystroke analysis of their last registration.
+
+You can adjust the level of security in &lt;span color="#ff0000"&gt;Settings&lt;/span&gt;.&lt;/b&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">center</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="Status_Bar">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="spacing">2</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

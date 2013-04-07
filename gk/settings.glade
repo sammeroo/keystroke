@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.24"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="Settings_Window">
+    <property name="width_request">450</property>
+    <property name="height_request">300</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Settings</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <signal name="destroy" handler="on_Settings_Window_destroy" swapped="no"/>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="width_request">450</property>
+        <property name="height_request">300</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="Settings_Label">
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">&lt;b&gt;Adjust Security Level:&lt;/b&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">center</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLayout" id="layout1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkRadioButton" id="Highest_Level">
+                <property name="label" translatable="yes">Highest</property>
+                <property name="width_request">300</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+                <signal name="clicked" handler="on_Highest_Level_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">50</property>
+                <property name="y">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="High_Level">
+                <property name="label" translatable="yes">High</property>
+                <property name="width_request">300</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+                <property name="group">Highest_Level</property>
+                <signal name="clicked" handler="on_High_Level_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">50</property>
+                <property name="y">35</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="Medium_Level">
+                <property name="label" translatable="yes">Medium</property>
+                <property name="width_request">300</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+                <property name="group">Highest_Level</property>
+                <signal name="clicked" handler="on_Medium_Level_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">50</property>
+                <property name="y">65</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="Low_Level">
+                <property name="label" translatable="yes">Low</property>
+                <property name="width_request">300</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="draw_indicator">True</property>
+                <property name="group">Highest_Level</property>
+                <signal name="clicked" handler="on_Low_Level_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">50</property>
+                <property name="y">95</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="Lowest_Level">
+                <property name="label" translatable="yes">Lowest</property>
+                <property name="width_request">300</property>
+                <property name="height_request">30</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="draw_indicator">True</property>
+                <property name="group">Highest_Level</property>
+                <signal name="clicked" handler="on_Lowest_Level_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">50</property>
+                <property name="y">125</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Info_Label">
+            <property name="height_request">90</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">&lt;b&gt;Note:&lt;/b&gt;  Lowering security level makes training faster
+while compromsing on security.
+All changes take place upon next restart.</property>
+            <property name="use_markup">True</property>
+            <property name="justify">center</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
